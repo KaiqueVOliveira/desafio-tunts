@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1><%= header.values[0] %></h1>
+    <p><%= header.values[1]%> </p>
+    <table style="width:100%">
+      <% columns.forEach(function(array){ %>
+        <tr>
+          <%for(let i=0; i< array.length; i++){%>
+            <th><%= array[i] %></th>
+          <% } %>
+        </tr>
+        
+          <% list.forEach(function(array){ %>
+            <tr>
+              <td><%= array.reg %></td>
+              <td><%= array.name %></td>
+              <td><%= array.absence %></td>
+              <td><%= array.t1 %></td>
+              <td><%= array.t2 %></td>
+              <td><%= array.t3 %></td>
+              <td><%= array.situation %></td>
+              <td><% (array.t1-array.t2-array.t3) %></td>
+            </tr>
+          <% }) %>
+        
+      <% }) %>
+    </table>
+    
+
   </body>
 </html>
