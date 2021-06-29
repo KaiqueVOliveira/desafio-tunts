@@ -3,6 +3,31 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+body table {
+  text-align: center;
+}
+
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+.table-body {
+  background-color: rgb(230, 224, 224);
+}
+
+.reproved {
+  background-color: red;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    width: auto;
+    font-size: 0.8rem;
+  }
+  h1 {
+    text-align: center;
+  }
+  table {
+    position: static;
+  }
 }
