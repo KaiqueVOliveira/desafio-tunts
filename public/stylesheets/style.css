@@ -15,10 +15,6 @@ a {
   background-color: rgb(230, 224, 224);
 }
 
-.reproved {
-  background-color: red;
-}
-
 @media screen and (max-width: 480px) {
   body {
     width: auto;
